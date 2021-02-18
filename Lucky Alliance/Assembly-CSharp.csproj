@@ -58,6 +58,7 @@
     <Compile Include="Assets\Script\TerrainScripts\Utils.cs" />
     <Compile Include="Assets\Shaders\Cameraandshader\CameraSketch.cs" />
     <Compile Include="Assets\Script\Player\FindAllClosestObstacles.cs" />
+    <Compile Include="Assets\Script\Player\DarumaManager.cs" />
     <Compile Include="Assets\Script\TerrainScripts\Chunk.cs" />
     <Compile Include="Assets\Script\Player\Movements.cs" />
     <Compile Include="Assets\Script\TerrainScripts\World.cs" />
@@ -66,25 +67,45 @@
     <Compile Include="Assets\Script\TerrainScripts\SerializeMesh.cs" />
     <Compile Include="Assets\Script\TerrainScripts\Block.cs" />
     <Compile Include="Assets\Script\Player\PlayerView.cs" />
-    <Compile Include="Assets\Script\Player\DarumaManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shaders\Cutoff.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shaders\ToonRamp.shader" />
      <None Include="Assets\Shaders\Cameraandshader\Sketch.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Shaders\ToonHologram.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Shaders\StencilWindowShader.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Shaders\ToonNormalMap.shader" />
      <None Include="Assets\Shaders\BumpDiffuseStencil.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Shaders\ToonOutline.shader" />
      <None Include="Assets\UVLocations\Concrete.txt" />
      <None Include="Assets\Shaders\Waves.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\UVLocations\Grass.txt" />
      <None Include="Assets\UVLocations\Beach.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Shaders\Glass.shader" />
      <None Include="Assets\Shaders\Extrude.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Shaders\Plasma.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Shaders\Waves with animation.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Shaders\TextureScroll.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

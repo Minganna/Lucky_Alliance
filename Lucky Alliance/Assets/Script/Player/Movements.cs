@@ -8,6 +8,10 @@ public class Movements : MonoBehaviour
     public KeyCode Left, Right, Up, Down;
     public bool SecondDaruma;
     public FindAllClosestObstacles fd;
+    public bool switched=false;
+    public GameObject ObjectiveToPush;
+    public Vector3 nextPosition;
+    public bool OnPosition=false;
     void Start()
     {
         Left = KeyCode.D;
@@ -37,6 +41,7 @@ public class Movements : MonoBehaviour
                 Left = LeftTemp;
                 Up = UpTemp;
                 Down = DownTemp;
+                switched = !switched;
             }
         }
     }
