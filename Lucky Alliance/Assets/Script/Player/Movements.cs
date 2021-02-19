@@ -12,16 +12,16 @@ public class Movements : MonoBehaviour
     public GameObject ObjectiveToPush;
     public Vector3 nextPosition;
     public bool OnPosition=false;
+    public float moveSpeed;
+    private bool isMoving = false;
+    StaticVariables sv=new StaticVariables();
     void Start()
     {
-        Left = KeyCode.D;
-        Right = KeyCode.A;
-        Up = KeyCode.S;
-        Down = KeyCode.W;
+        Left = sv.GetRight();
+        Right = sv.GetLeft();
+        Up = sv.GetDown();
+        Down = sv.GetUp();
         fd = this.GetComponent<FindAllClosestObstacles>();
-
-
-
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class Movements : MonoBehaviour
 
         if (SecondDaruma)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(sv.GetMirror()))
             {
                 KeyCode LeftTemp, RightTemp, UpTemp, DownTemp;
                 LeftTemp = Right;
@@ -49,29 +49,64 @@ public class Movements : MonoBehaviour
 
    public  void MoveLeft(Vector3 LookRotation)
     {
-        transform.position += Vector3.left;
-        LookRotation = new Vector3(0, 180, 0);
-        Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
-
+        if(!isMoving)
+        {
+            StartCoroutine(StartMovement(transform.position + Vector3.left));
+            LookRotation = new Vector3(0, 180, 0);
+            Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        }
     }
     public void MoveRight(Vector3 LookRotation)
     {
-        transform.position += Vector3.right;
-        Daruma.transform.Rotate(Daruma.transform.rotation * Vector3.right);
-        LookRotation = new Vector3(0, 0, 0);
-        Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        if(!isMoving)
+        {
+            Vector3 newPos = transform.position + Vector3.right;
+            StartCoroutine(StartMovement(newPos));
+            LookRotation = new Vector3(0, 0, 0);
+            Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        }
+        
     }
     public void MoveUp(Vector3 LookRotation)
     {
-        transform.position += Vector3.forward;
-        Daruma.transform.Rotate(Daruma.transform.rotation * Vector3.forward);
-        LookRotation = new Vector3(0, 270, 0);
-        Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        if(!isMoving)
+        {
+            StartCoroutine(StartMovement(transform.position + Vector3.forward));
+            //transform.position += Vector3.forward;
+            Daruma.transform.Rotate(Daruma.transform.rotation * Vector3.forward);
+            LookRotation = new Vector3(0, 270, 0);
+            Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        }
     }
     public void MoveDown(Vector3 LookRotation)
     {
-        transform.position += Vector3.back;
-        LookRotation = new Vector3(0, 90, 0);
-        Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        if(!isMoving)
+        {
+            StartCoroutine(StartMovement(transform.position + Vector3.back));
+            //transform.position += Vector3.back;
+            LookRotation = new Vector3(0, 90, 0);
+            Daruma.transform.rotation = Quaternion.Euler(LookRotation.x, LookRotation.y, LookRotation.z);
+        }
+    }
+
+
+    IEnumerator StartMovement(Vector3 Position)
+    {
+        isMoving = true;
+        while (transform.position.x != Position.x)
+        {
+            Debug.Log("Moving from: " + transform.position.x + " " + transform.position.y +" "+ transform.position.z + " to: " + Position.x+ " " +Position.y+" " +Position.z);
+            transform.position = Vector3.MoveTowards(transform.position, Position, moveSpeed * Time.deltaTime);
+            yield return null;
+            
+        }
+        while (transform.position.z != Position.z)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Position, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        isMoving = false;
+
+
     }
 }

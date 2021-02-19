@@ -67,6 +67,8 @@
     <Compile Include="Assets\Script\TerrainScripts\SerializeMesh.cs" />
     <Compile Include="Assets\Script\TerrainScripts\Block.cs" />
     <Compile Include="Assets\Script\Player\PlayerView.cs" />
+    <Compile Include="Assets\Script\MainMenu\MainMenu.cs" />
+    <Compile Include="Assets\Script\MainMenu\StaticVariables.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shaders\Cutoff.shader" />

@@ -12,6 +12,9 @@ public class DarumaManager : MonoBehaviour
     public GameObject nextPart;
 
     [SerializeField] GameObject Win;
+    [SerializeField] GameObject FireWorks1;
+    [SerializeField] GameObject FireWorks2;
+
     private bool Ending=true;
 
 
@@ -70,6 +73,8 @@ public class DarumaManager : MonoBehaviour
         }
         Debug.Log(gameWon);
         Win.SetActive(true);
+        FireWorks1.SetActive(true);
+        FireWorks2.SetActive(true);
         if(Ending)
         {
             Ending = false;
@@ -79,7 +84,7 @@ public class DarumaManager : MonoBehaviour
 
     IEnumerator BackToMenu()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
         
     }
