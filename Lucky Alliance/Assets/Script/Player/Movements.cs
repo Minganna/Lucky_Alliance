@@ -95,7 +95,6 @@ public class Movements : MonoBehaviour
         isMoving = true;
         while (transform.position.x != Position.x)
         {
-            Debug.Log("Moving from: " + transform.position.x + " " + transform.position.y +" "+ transform.position.z + " to: " + Position.x+ " " +Position.y+" " +Position.z);
             transform.position = Vector3.MoveTowards(transform.position, Position, moveSpeed * Time.deltaTime);
             yield return null;
             

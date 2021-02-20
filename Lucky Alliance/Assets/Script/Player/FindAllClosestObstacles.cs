@@ -38,7 +38,6 @@ public class FindAllClosestObstacles : MonoBehaviour
             if ((this.transform.position - obstacle).magnitude == 1 && (this.transform.position.x == obstacle.x))
             {
                 Debug.DrawLine(this.transform.position, obstacle, Color.blue);
-                Debug.Log(this.name + " Z difference " + (this.transform.position.z - obstacle.z));
                 distz = this.transform.position.z - obstacle.z;
                 return;
             }
@@ -56,7 +55,6 @@ public class FindAllClosestObstacles : MonoBehaviour
             if ((this.transform.position - obstacle).magnitude == 1&&(this.transform.position.z==obstacle.z))
             {
                 Debug.DrawLine(this.transform.position, obstacle, Color.red);
-                Debug.Log(this.name + " X difference " + (this.transform.position.x - obstacle.x));
                 distx = this.transform.position.x - obstacle.x;
                 return;
             }

@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 31e821dd3493d7545b8d7817023c611d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: cfb0b520186e45f42914b364a9a3db6e
+  - enabled: 1
+    path: Assets/Scenes/Daruma.unity
+    guid: bd60685b10437f6458b35c0af4c3f266
+  - enabled: 1
+    path: Assets/Scenes/HorseShoe.unity
+    guid: 2d6df7a6cbc9669489fe591a44a10dae
+  - enabled: 1
+    path: Assets/Scenes/Clover.unity
+    guid: 62e3a3f4453112e428ed3ee6aa00c9ef
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 8da4620d151c0f54d8974b4cdbbf65ff
   m_configObjects: {}

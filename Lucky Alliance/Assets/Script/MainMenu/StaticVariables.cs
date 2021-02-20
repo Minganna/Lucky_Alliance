@@ -6,6 +6,7 @@ public class StaticVariables
 {
 
     static KeyCode Left, Right, Up, Down,Mirror;
+    static bool HorseShoe, Daruma, Clover;
 
     public void LeftKey(KeyCode newLeft)
     {
@@ -29,6 +30,36 @@ public class StaticVariables
         Mirror = newMirror;
     }
 
+
+    public void CompleteHorseShoe(bool status)
+    {
+        HorseShoe = status;
+    }
+
+    public void CompleteDaruma(bool status)
+    {
+        Daruma = status;
+    }
+
+    public void CompleteClover(bool status)
+    {
+        Clover = status;
+    }
+
+    public bool HorseShoeStatus()
+    {
+        return HorseShoe;
+    }
+
+    public bool DarumaStatus()
+    {
+        return Daruma;
+    }
+
+    public bool CloverStatus()
+    {
+        return Clover;
+    }
 
     public KeyCode GetLeft()
     {
